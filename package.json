@@ -1,0 +1,22 @@
+{
+  "name": "grokbot-slack-relay",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": "24.x"
+  },
+  "scripts": {
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@slack/bolt": "^5.1.0",
+    "@vercel/functions": "^3.10.4",
+    "@vercel/slack-bolt": "^1.7.3"
+  },
+  "devDependencies": {
+    "@types/node": "^24.19.2",
+    "typescript": "^7.0.2",
+    "vitest": "^5.0.5"
+  }
+}

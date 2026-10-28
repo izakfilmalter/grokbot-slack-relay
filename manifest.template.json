@@ -1,0 +1,51 @@
+{
+  "display_information": {
+    "name": "Grok Bot",
+    "description": "Relays DMs and mentions to a Grok Bot routine."
+  },
+  "features": {
+    "app_home": {
+      "home_tab_enabled": false,
+      "messages_tab_enabled": true,
+      "messages_tab_read_only_enabled": false
+    },
+    "bot_user": {
+      "display_name": "Grok Bot",
+      "always_online": true
+    },
+    "assistant_view": {
+      "assistant_description": "Ask me anything; messages are relayed to a Grok Bot routine."
+    }
+  },
+  "oauth_config": {
+    "scopes": {
+      "bot": [
+        "app_mentions:read",
+        "im:history",
+        "im:read",
+        "chat:write",
+        "channels:history",
+        "groups:history",
+        "reactions:write",
+        "users:read",
+        "assistant:write"
+      ]
+    }
+  },
+  "settings": {
+    "event_subscriptions": {
+      "request_url": "https://YOUR-RELAY-DOMAIN/api/slack/events",
+      "bot_events": [
+        "app_mention",
+        "message.im",
+        "message.channels",
+        "message.groups",
+        "assistant_thread_started",
+        "assistant_thread_context_changed"
+      ]
+    },
+    "org_deploy_enabled": false,
+    "socket_mode_enabled": false,
+    "token_rotation_enabled": false
+  }
+}
